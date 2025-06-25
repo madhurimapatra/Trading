@@ -46,12 +46,14 @@ public class TwoFactorOtpServiceImpl implements TwoFactorOtpService{
     }
 
     @Override
-    public boolean verifyTwoFactorOtp(TwoFactorOTP twoFactorOTP, String otp) {
-        return false;
+    public boolean verifyTwoFactorOtp(TwoFactorOTP twoFactorOtp, String otp) {
+        return twoFactorOtp.getOtp().equals(otp);
     }
 
     @Override
-    public void deleteTwoFactorOtp(TwoFactorOTP twoFactorOTP) {
+    public void deleteTwoFactorOtp(TwoFactorOTP twoFactorOtp) {
+
+        twoFactorOtpRepository.delete(twoFactorOtp);
 
     }
 }

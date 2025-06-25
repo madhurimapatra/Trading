@@ -10,9 +10,9 @@ public interface TwoFactorOtpService {
 
     TwoFactorOTP findById(String id);
 
-    boolean verifyTwoFactorOtp(TwoFactorOTP twoFactorOTP,String otp);
+    boolean verifyTwoFactorOtp(TwoFactorOTP twoFactorOtp,String otp);
 
-    void deleteTwoFactorOtp(TwoFactorOTP twoFactorOTP);
+    void deleteTwoFactorOtp(TwoFactorOTP twoFactorOtp);
 
 
 }

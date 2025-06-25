@@ -43,6 +43,13 @@ public class AuthController {
 
         String jwt = JwtProvider.generateToken(auth);
 
+        if(user.getTwoFactorAuth().isEnabled()){
+            AuthResponse res= new AuthResponse();
+            res.setMessage("Two factor auth is enabled");
+            res.setTwoFactorAuthEnabled(true);
+            String otp = otpUtils.get
+
+        }
         AuthResponse res = new AuthResponse();
         res.setJwt(jwt);
         res.setStatus(true);
